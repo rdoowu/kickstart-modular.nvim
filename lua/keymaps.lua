@@ -34,6 +34,13 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
+-- Tabs setting.
+vim.keymap.set('n', '<Tab>', ':tabnext<CR>', { silent = true, desc = 'Move to the next tab' })
+vim.keymap.set('n', '<S-Tab>', ':tabprevious<CR>', { silent = true, desc = 'Move to the previous tab' })
+
+-- Oil setting.
+vim.keymap.set('n', '<leader>o', ':Oil<CR>', { silent = true, desc = 'Open oil file explorer' })
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
@@ -48,4 +55,4 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
--- vim: ts=2 sts=2 sw=2 et
+-- im.opt.vim: ts=2 sts=2 sw=2 et
